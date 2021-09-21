@@ -1,5 +1,5 @@
 # VUB-Templates
-This package contains templates for VUB-styled reports. With these templates, reports can be generated through code. See [here](## Usage) how to do that.
+This package contains templates for VUB-styled reports. With these templates, reports can be generated through code. See [here](#-usage) how to do that.
 
 ## Installation
 The easiest way to install in directly from GitHub trough pip:
