@@ -8,7 +8,7 @@ setup(
     url='https://github.com/Xergon-sci/VUB-Templates',
     author='Michiel Jacobs',
     author_email='michiel.jacobs@vub.be',
-    packages=['vub-templates'],
+    packages=['vubTemplates'],
     install_requires=['fpdf2'],
     version='0.1',
     license='MIT',
