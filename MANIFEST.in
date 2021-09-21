@@ -1,2 +1,2 @@
-include vub-templates/img
-include vub-templates/fonts
+include vubTemplates/img/*
+include vubTemplates/fonts/*
