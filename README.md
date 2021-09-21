@@ -2,15 +2,15 @@
 This package contains templates for VUB-styled reports. With these templates, reports can be generated through code. See [here](#-usage) how to do that.
 
 ## Installation
-The easiest way to install in directly from GitHub trough pip:
+The easiest way to install is directly from GitHub trough pip:
 ```
 pip install git+https://github.com/Xergon-sci/VUB-Templates.git
 ```
 
 ## Usage
-First, an instance of the template is made. Then, the document can be constructed as pleased. See the example below. If changes or small additions are wanted the fpdf2 [documentation](https://pyfpdf.github.io/fpdf2/index.html) can be consulted.
+First, an instance of the template is made. Then, the document can be constructed as pleased. See the example below. If changes or small additions are wanted, the [fpdf2 documentation](https://pyfpdf.github.io/fpdf2/index.html) can be consulted.
 
-```
+```python
 from templates import Report
 
 # Make an instance from a template, it automatically generates a front page.
