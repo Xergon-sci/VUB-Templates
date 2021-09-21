@@ -6,6 +6,18 @@ from fpdf import FPDF
 class Report(FPDF):
 
     def __init__(self, title, subtitle, author, faculty):
+        '''
+        Constructor, inits the report.
+
+        Parameters:
+            title (str): The title of the report.
+            subtitle (str): The subtitile of the report.
+            author (str): The author of the report.
+            faculty (str): The faculty or similar info string.
+
+        Returns:
+            Report object (str1): The object to add input too.   
+        '''
         super().__init__()
         self.PATH = os.path.dirname(os.path.abspath(__file__))
         self.IMG = os.path.join(self.PATH, 'img')
@@ -58,26 +70,57 @@ class Report(FPDF):
         self.multi_cell(200, 5, txt='{}\n{}\n{}'.format(self.author, self.faculty, self.date), ln=2)
     
     def head1(self, text):
+        '''
+        Draws a header1.
+
+        Parameters:
+            text (str): The text of the header.  
+        '''
         self.set_font('verdana', size=16)
         self.set_text_color(0,51,153)
         self.cell(self.get_string_width(text), 10, txt=text, ln=1)
     
     def head2(self, text):
+        '''
+        Draws a header2.
+
+        Parameters:
+            text (str): The text of the header.  
+        '''
         self.set_font('verdana', size=11)
         self.set_text_color(0,0,0)
         self.cell(self.get_string_width(text), 10, txt=text, ln=1)
     
     def head3(self, text):
+        '''
+        Draws a header3.
+
+        Parameters:
+            text (str): The text of the header.  
+        '''
         self.set_font('verdana', style='I', size=9)
         self.set_text_color(0,0,0)
         self.cell(self.get_string_width(text), 10, txt=text, ln=1)
     
     def text(self, text):
+        '''
+        Draws a text.
+
+        Parameters:
+            text (str): The text to write.  
+        '''
         self.set_text_color(0,0,0)
         self.set_font('verdana', size=9)
         self.multi_cell(0, 5, txt=text, ln=1)
     
     def table(self, data, columns):
+        '''
+        Draws a table.
+
+        Parameters:
+            data (tuple, nd-list, ...): Data asset representing the data in the table.
+            columns (int): Ammount of columns in the table.  
+        '''
         self.set_fill_color(0,51,153)
         self.set_font('verdana', size=9)
         col_width = self.epw / columns
