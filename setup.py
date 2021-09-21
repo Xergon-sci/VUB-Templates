@@ -9,7 +9,7 @@ setup(
     author='Michiel Jacobs',
     author_email='michiel.jacobs@vub.be',
     packages=['vub-templates'],
-    install_requires=['fpdf'],
+    install_requires=['fpdf2'],
     version='0.1',
     license='MIT',
     description='A package to dynamically generate reports in the VUB house style.',
@@ -20,4 +20,5 @@ setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
+    include_package_data=True,
 )
