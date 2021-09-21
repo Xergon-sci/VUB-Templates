@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(
-    name='VUB-Templates',
+    name='vubTemplates',
     url='https://github.com/Xergon-sci/VUB-Templates',
     author='Michiel Jacobs',
     author_email='michiel.jacobs@vub.be',
