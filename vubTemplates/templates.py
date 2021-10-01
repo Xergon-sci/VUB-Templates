@@ -135,3 +135,25 @@ class Report(FPDF):
                     self.set_text_color(0,0,0)
                     self.multi_cell(col_width, line_height, col, border=1, fill=False, ln=3, max_line_height=self.font_size)
             self.ln(line_height)
+            
+            def log(self, text):
+        self.set_text_color(0,0,0)
+        self.set_font('verdana', size=3)
+        self.multi_cell(0, 5, txt=text, ln=1)
+    
+    def label(self, label, text):
+        text = str(text)
+        self.set_text_color(0,0,0)
+        self.set_font('verdana', size=9, style='B')
+        self.cell(self.get_string_width(label),5, label,ln=0)
+        self.set_font('verdana', size=9, style='')
+        self.cell(self.get_string_width(text),5, text, ln=1)
+    
+    def dict_label(self, label, text):
+        label = '{}: '.format(label)
+        text = str(text)
+        self.set_text_color(0,0,0)
+        self.set_font('verdana', size=9, style='B')
+        self.cell(self.get_string_width(label),5, label,ln=0)
+        self.set_font('verdana', size=9, style='')
+        self.cell(self.get_string_width(text),5, text, ln=1)
