@@ -10,7 +10,7 @@ setup(
     author_email='michiel.jacobs@vub.be',
     packages=['vubTemplates'],
     install_requires=['fpdf2'],
-    version='0.1',
+    version='0.1.2',
     license='MIT',
     description='A package to dynamically generate reports in the VUB house style.',
     long_description=long_description,
