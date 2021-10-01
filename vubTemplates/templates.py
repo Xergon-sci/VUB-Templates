@@ -136,7 +136,7 @@ class Report(FPDF):
                     self.multi_cell(col_width, line_height, col, border=1, fill=False, ln=3, max_line_height=self.font_size)
             self.ln(line_height)
             
-            def log(self, text):
+    def log(self, text):
         self.set_text_color(0,0,0)
         self.set_font('verdana', size=3)
         self.multi_cell(0, 5, txt=text, ln=1)
